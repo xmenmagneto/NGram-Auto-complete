@@ -21,7 +21,8 @@ public class NGramLibraryBuilder {
 		int noGram;
 		@Override
 		public void setup(Context context) {
-
+			Configuration configuration = context.getConfiguration();
+			noGram = configuration.getInt("noGram", 5);
 		}
 
 		// map method
