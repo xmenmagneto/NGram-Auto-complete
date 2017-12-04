@@ -26,7 +26,7 @@ public class Driver {
 		Configuration conf1 = new Configuration();
 
 		//Define the job to read data sentence by sentence
-		conf1.set("textinputformat.record.delimiter", ".");
+		conf1.set("textinputformat.record.delimiter", "."); //可以用正则表达式,表示所有标点符号
 		conf1.set("noGram", numberOfNGram);
 		
 		Job job1 = Job.getInstance(conf1);
